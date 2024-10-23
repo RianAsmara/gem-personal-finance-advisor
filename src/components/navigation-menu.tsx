@@ -13,12 +13,12 @@ import ListItem from "@/components/list-item";
 const TopNavigationMenu = () => {
   return (
     <div>
-        <NavigationMenu>
+      <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
+            <NavigationMenuTrigger>Products</NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+              <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[600px] lg:grid-cols-[.75fr_.75fr] xl:w-[900px] xl:grid-cols-[1fr_1fr_1fr]">
                 <li className="row-span-3">
                   <NavigationMenuLink asChild>
                     <Link
@@ -26,32 +26,53 @@ const TopNavigationMenu = () => {
                       href="/"
                     >
                       <div className="mb-2 mt-4 text-lg font-medium">
-                        shadcn/ui
+                        Fin.ai
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
-                        Beautifully designed components that you can copy and
-                        paste into your apps. Accessible. Customizable. Open
-                        Source.
+                        AI-powered tools for financial planning, analysis, and advice.
                       </p>
                     </Link>
                   </NavigationMenuLink>
                 </li>
-                <ListItem href="/docs" title="Introduction">
-                  Re-usable components built using Radix UI and Tailwind CSS.
+                <ListItem href="/financial-review" title="Financial Review">
+                  <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                    Review your financial situation and get advice from our AI.
+                  </p>
                 </ListItem>
-                <ListItem href="/docs/installation" title="Installation">
-                  How to install dependencies and structure your app.
+                <ListItem href="/financial-planning" title="Financial Planning">
+                  <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                    Plan your financial future and get suggestions.
+                  </p>
                 </ListItem>
-                <ListItem href="/docs/primitives/typography" title="Typography">
-                  Styles for headings, paragraphs, lists...etc
+                <ListItem href="/financial-results" title="Financial Results">
+                  <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                    View and download your financial report history.
+                  </p>
+                </ListItem>
+                <ListItem href="/financial-analysis" title="Financial Analysis">
+                  <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                    Analyze multiple financial situations and find the best strategy.
+                  </p>
+                </ListItem>
+                <ListItem href="/financial-advice" title="Financial Advice">
+                  <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                    Get advice on your financial decisions.
+                  </p>
                 </ListItem>
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/docs" legacyBehavior passHref>
+            <Link href="/pricing" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Documentation
+                Pricing
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href="/about-us" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                About Us
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>

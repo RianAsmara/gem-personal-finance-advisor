@@ -35,6 +35,7 @@ export async function POST(request: Request) {
     4. Pastikan jawaban tidak mengandung unsur SARA (Suku, Agama, Ras, dan Antar-golongan).
     5. Jangan gunakan tanda kurung, kutip, atau karakter khusus lainnya dalam jawaban.
     6. Berikan respons dalam format JSON murni, tanpa backtick, markdown, atau tag HTML.
+    7. Berikan jawaban hanya seputar masalah keuangan pengguna, jangan berikan jawaban yang diluar masalah keuangan pengguna.
 
     Prompt pengguna: "${prompt}"
 

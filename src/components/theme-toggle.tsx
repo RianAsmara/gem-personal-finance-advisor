@@ -7,7 +7,7 @@ import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 
 export function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
@@ -21,10 +21,10 @@ export function ThemeToggle() {
     <Button
       variant="outline"
       size="sm"
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
       aria-label="Toggle dark mode"
     >
-      {theme === "dark" ? (
+      {resolvedTheme === "dark" ? (
         <SunIcon className="h-4 w-4" />
       ) : (
         <MoonIcon className="h-4 w-4" />

@@ -122,7 +122,7 @@ export default function Home() {
                       <Textarea
                         placeholder="Tanyakan disini"
                         {...field}
-                        className="min-h-[120px] text-base"
+                        className="min-h-[120px] text-base focus-visible:ring-0 focus-visible:ring-offset-0"
                       />
                     </FormControl>
                     <FormMessage />
