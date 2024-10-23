@@ -17,13 +17,10 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import ResponseAI from "@/components/response-ai";
 import { Skeleton } from "@/components/ui/skeleton";
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-} from "@/components/ui/navigation-menu";
+
 import { ThemeToggle } from "@/components/theme-toggle";
+import TopNavigationMenu from "@/components/navigation-menu";
+
 
 export type AIResponse = {
   saran: string;
@@ -32,7 +29,6 @@ export type AIResponse = {
 };
 
 export default function Home() {
-
   const FormSchema = z.object({
     prompt: z
       .string({
@@ -97,25 +93,13 @@ export default function Home() {
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center">
               <h1 className="text-2xl font-bold mr-4">Logo</h1>
-              <NavigationMenu>
-                <NavigationMenuList>
-                  {/* <NavigationMenuItem>
-                    <NavigationMenuTrigger>Menu</NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem> */}
-                  <NavigationMenuItem>
-                    <NavigationMenuLink href="/about">About</NavigationMenuLink>
-                  </NavigationMenuItem>
-                  <NavigationMenuItem>
-                    <NavigationMenuLink href="/contact">Contact</NavigationMenuLink>
-                  </NavigationMenuItem>
-                </NavigationMenuList>
-              </NavigationMenu>
+              <TopNavigationMenu />
             </div>
             <div className="flex items-center space-x-4">
               <ThemeToggle />
-              <Button variant="outline" size="sm">Sign In</Button>
+              <Button variant="outline" size="sm">
+                Sign In
+              </Button>
               <Button size="sm">Sign Up</Button>
             </div>
           </div>
